@@ -14,7 +14,7 @@
         <!--Breadcrumbs-->
         <div class="row">
             <div class="product-breadcrumb col hidden-sm-down">
-                <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+                <isinclude template="components/breadcrumbs/customPageBreadcrumbs" />
             </div>
         </div>
         <div class="row">

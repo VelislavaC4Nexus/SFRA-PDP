@@ -1,0 +1,15 @@
+.size-button{
+    border: 1px solid transparent;
+}
+.size-button:hover{
+    border: 1px solid darkgray;
+    background-color: transparent;
+    transition: all ease-in-out .3s;
+}
+.size-select:focus{
+outline: none;
+}
+.size-select{
+    height: 40px;
+}
+ 

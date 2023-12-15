@@ -6,7 +6,7 @@
                     <isif condition="${loopState.last}">
                         <a href="${breadcrumbValue.url}" aria-current="page">
                             ${breadcrumbValue.htmlValue}
-                        </a>
+                      </a>
                     <iselse>
                         <a href="${breadcrumbValue.url}">
                             ${breadcrumbValue.htmlValue}
