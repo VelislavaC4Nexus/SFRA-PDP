@@ -1,0 +1,2 @@
+${price.formatted.slice(1)} ${price.formatted.slice(0,1)}
+
