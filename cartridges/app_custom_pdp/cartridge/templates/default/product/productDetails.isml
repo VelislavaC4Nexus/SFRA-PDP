@@ -57,18 +57,21 @@
                                 <isif condition="${attributeStatus.last && !isBundle}">
                                     <!-- Size Chart -->
                                     <isif condition="${product.variationAttributes && product.sizeChartId}">
-                                        <div class="row">
-                                            <div class="size-chart col-12">
-                                                <isinclude template="product/components/sizeChart" />
-                                            </div>
+
+                                        <div class="size-chart col-4">
+                                            <isinclude template="product/components/sizeChart" />
                                         </div>
+
                                     </isif>
                                 </isif>
 
                                 <isif condition="${attributeStatus.last && !isBundle}">
                                     <!-- Quantity Drop Down Menu -->
-                                    <div class="attribute quantity col-4">
-                                        <isinclude template="product/components/quantity" />
+                                    <div class="attribute quantity col-12">
+                                        <div class="row">
+
+                                            <isinclude template="product/components/customQuantity" />
+                                        </div>
                                     </div>
                                 </isif>
                             </div>
