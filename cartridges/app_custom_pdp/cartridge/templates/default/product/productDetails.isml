@@ -28,21 +28,20 @@
                     </div>
                     <!-- Prices -->
 
-                    <div class="col-12 prices d-flex justify-content-start">
+                    <div class="col-12 prices d-flex justify-content-start py-2 border-bottom">
                         <isset name="price" value="${product.price}" scope="page" />
                         <isinclude template="product/components/pricing/main" />
                     </div>
                     <!-- Rating -->
-                    <div class="col-12">
+                    <div class="col-12 py-2  border-bottom">
                         <isinclude template="product/components/pidRating" />
                     </div>
                     <!-- Description -->
-                    <div class="product-description-pdp col-10 mt-2">
+                    <div class="product-description-pdp col-12 py-2 border-bottom">
                         <isinclude template="product/components/description" />
                     </div>
 
-
-                    <div class="attributes">
+                    <div class="attributes col-12">
                         <!-- Attributes and Quantity -->
                         <isinclude template="product/components/mainAttributes" />
 
@@ -50,9 +49,12 @@
                         <isset name="loopState" value="${{
                                                        count: 1}}" scope="page" />
                         <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
-                            <div class="row" data-attr="${attr.id}">
-                                <div class="col-8">
-                                    <isinclude template="product/components/customVariationAttribute" />
+                            <div class="row " data-attr="${attr.id}">
+
+                                <div class="col-8 ">
+                                    
+                                        <isinclude template="product/components/customVariationAttribute" />
+                                 
                                 </div>
                                 <isif condition="${attributeStatus.last && !isBundle}">
                                     <!-- Size Chart -->
@@ -65,11 +67,13 @@
                                     </isif>
                                 </isif>
 
+
+
+
                                 <isif condition="${attributeStatus.last && !isBundle}">
                                     <!-- Quantity Drop Down Menu -->
-                                    <div class="attribute quantity col-12">
-                                        <div class="row">
-
+                                    <div class="attribute quantity col-12 py-4 border-bottom border-top">
+                                        <div class="d-flex">
                                             <isinclude template="product/components/customQuantity" />
                                         </div>
                                     </div>
@@ -78,7 +82,7 @@
                         </isloop>
 
                         <isif condition="${!product.variationAttributes}">
-                            <div class="row">
+                            <div class="row ">
                                 <div class="col-12">
                                     <div class="simple-quantity">
                                         <isinclude template="product/components/quantity" />
@@ -87,20 +91,23 @@
                             </div>
                         </isif>
 
-                        <div class="product-options">
-                            <isif condition="${product.options && product.options.length > 0}">
-                                <isinclude template="product/components/options" />
-                            </isif>
+                        <div>
+
+                            <!-- Cart and [Optionally] Apple Pay -->
+                            <isinclude template="product/components/addToCartProduct" />
                         </div>
 
-                        <!-- Size Chart -->
-                        <isif condition="${product.variationAttributes && product.sizeChartId}">
-                            <div class="row">
-                                <div class="size-chart col-12">
-                                    <isinclude template="product/components/sizeChart" />
-                                </div>
+                        <iscomment>
+                            <div class="product-options">
+                                <isif condition="${product.options && product.options.length > 0}">
+                                    <isinclude template="product/components/options" />
+                                </isif>
                             </div>
-                        </isif>
+                        </iscomment>
+
+
+
+
 
                         <!-- Product Availability -->
                         <isinclude template="product/components/productAvailability" />

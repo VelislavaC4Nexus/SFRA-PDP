@@ -2,11 +2,11 @@
     var assets = require('*/cartridge/scripts/assets');
     assets.addJs('/js/quantity.js');
 </isscript>
-<div class="col-6">
+<div class="col-8">
 
     <label for="quantity">${Resource.msg('label.quantity', 'common', null)}</label>
 </div>
-<div class="col-3">
+<div class="col-4">
     <div class="d-flex ">
         <button type="button" class="quantity-decrease btn rounded-circle border border-secondary"><i
                 class="fa fa-minus text-secondary"></i></button>
