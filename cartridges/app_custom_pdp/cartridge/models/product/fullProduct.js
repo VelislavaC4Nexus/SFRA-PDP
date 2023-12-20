@@ -7,6 +7,7 @@ module.exports = function fullProduct(product, apiProduct, option) {
     base.call(this, product, apiProduct, option);
 
     decorators.deliveryInformation(product, apiProduct);
+     decorators.recommendations(product, apiProduct)
 
     return product;
 

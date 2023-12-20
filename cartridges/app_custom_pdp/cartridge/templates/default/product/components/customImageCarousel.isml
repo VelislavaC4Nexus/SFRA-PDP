@@ -3,7 +3,7 @@
 </isscript>
 
 <div class="primary-images col-12 col-sm-6">
-    <div id="pdpCarousel-${product.id}" class="row carousel slide" data-interval="0"
+    <div id="pdpCarousel-${product.id}" class="row carousel-new slide" data-interval="0"
         data-prev="${Resource.msg('button.previous', 'common', null)}"
         data-next="${Resource.msg('button.next', 'common', null)}">
         <div class='col-3'>
@@ -30,6 +30,5 @@
                 </isloop>
             </div>
         </div>
-
     </div>
 </div>
