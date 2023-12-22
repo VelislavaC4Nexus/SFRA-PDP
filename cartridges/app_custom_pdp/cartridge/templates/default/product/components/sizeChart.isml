@@ -15,10 +15,8 @@
         </div>
     </div>
 </div>
-<div class="text-right">
-    <a href="${URLUtils.url('Product-SizeChart', 'cid', product.sizeChartId)}" class="size-chart-link"
+<a href="${URLUtils.url('Product-SizeChart', 'cid', product.sizeChartId)}" class="size-chart-link"
         data-toggle="modal" data-target="#sizeChartModal">${Resource.msg('link.size_chart', 'product', null)}</a>
-</div>
 
 
 
@@ -27,7 +25,4 @@
 
 
 
-<iscomment>
-    <a href="${URLUtils.url('Product-SizeChart', 'cid', product.sizeChartId)}">${Resource.msg('link.size_chart', 'product', null)}</a>
-    <div class="size-chart-collapsible"></div>
-</iscomment>
+

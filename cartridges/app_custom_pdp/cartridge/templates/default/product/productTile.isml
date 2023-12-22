@@ -1,11 +1,12 @@
-<div class="row product-tile">
+<div class="row product-tile d-flex justify-content-center">
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->
     <isinclude template="product/components/productTileImage" />
-    <div class="tile-body col-12">
+    <div class="tile-body col-12 ">
         <isif condition="${pdict.display.swatches !== false}">
             <isinclude template="product/components/productTileSwatch" />
         </isif>
-
+<div class="d-flex flex-column align-items-center ">
+    
         <isinclude template="product/components/productTileName" />
 
         <isset name="price" value="${product.price}" scope="page" />
@@ -18,6 +19,7 @@
         <isif condition="${pdict.display.ratings !== false}">
             <isinclude template="product/productTileFooter" />
         </isif>
+</div>
     </div>
     <!-- END_dwmarker -->
 </div>

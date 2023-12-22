@@ -24,7 +24,7 @@
         <!-- Circular Swatch Image Attribute Values -->
         <isloop items="${attr.values}" var="attrValue">
             <isif condition="${!(isBundle && product.productType === 'variant' && !attrValue.selected)}">
-                <button class="color-attribute d-none"
+                <button class="color-attribute "
                     aria-label="${Resource.msg('label.select', 'common', null)} ${attr.displayName} ${attrValue.displayValue}"
                     aria-describedby="${attrValue.id}" data-url="${attrValue.url}" ${product.productType === "variant" && isBundle ? "disabled" : ""}>
                     <span data-attr-value="${attrValue.value}" class="

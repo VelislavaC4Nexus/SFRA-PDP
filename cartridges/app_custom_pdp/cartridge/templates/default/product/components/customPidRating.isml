@@ -1,4 +1,8 @@
 <div class="product-number-rating clearfix d-flex flex-start  border-top-0">
+     <!-- Product Number -->
+    <div class="product-number pull-left d-none">
+        <isinclude template="product/components/productNumber" />
+    </div> 
     <!-- Product Rating -->
     <div class="ratings pull-right text-primary">
         <span class="sr-only">${Resource.msgf('label.product.ratings', 'common', null, product.rating)}</span>

@@ -8,7 +8,7 @@
             <h3 class="text-center carousel-title">${Resource.msg('product.recommendations.titlte', 'product', null)}</h3>
         </div>
     </div>
-    <div id="recommendationsCarousel" class="carousel-new slide w-100" data-ride="carousel">
+    <div id="recommendationsCarousel" class="carousel-new  slide w-100" data-ride="carousel">
         <div class="carousel-inner w-100 d-flex align-self-stretch" role="listbox">
             <isloop items="${product.recommendations}" var="recommendation" status="loopStatus">
                 <div class="carousel-item ${loopStatus.first ? 'active' : ''}">

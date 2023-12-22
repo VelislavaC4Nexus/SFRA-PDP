@@ -35,7 +35,7 @@
                     </div>
                     <!-- Rating -->
                     <div class="col-12 py-2  border-bottom">
-                        <isinclude template="product/components/pidRating" />
+                        <isinclude template="product/components/customPidRating" />
                     </div>
                     <!-- Description -->
                     <div class="product-description-pdp col-12 py-2 border-bottom">
@@ -67,9 +67,6 @@
 
                                     </isif>
                                 </isif>
-
-
-
 
                                 <isif condition="${attributeStatus.last && !isBundle}">
                                     <!-- Quantity Drop Down Menu -->

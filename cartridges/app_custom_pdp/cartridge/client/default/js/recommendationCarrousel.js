@@ -1,5 +1,18 @@
-$(document).ready(function() {
-    $('.carousel-new').carousel()
+$(document).ready(function () {
+    $('#recommendationsCarousel').carousel({
+        interval: false 
+    });
+
+    $('.carousel-control-prev').click(function (e) {
+        e.preventDefault();
+        $('#recommendationsCarousel').carousel('prev');
+    });
+
+    $('.carousel-control-next').click(function (e) {
+        e.preventDefault();
+        $('#recommendationsCarousel').carousel('next');
+    });
+
     $('.carousel-new .carousel-item').each(function () {
         let minItemsPerSlide = 4;
         let next = $(this).next();
