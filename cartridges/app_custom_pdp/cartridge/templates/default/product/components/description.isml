@@ -1,0 +1,21 @@
+<isif condition="${product.shortDescription && product.shortDescription.length > 110}">
+    <div class="description">
+        <div class="collapse show" id="collapseOne" data-parent=".description">
+            <p>
+                ${product.shortDescription.slice(0,110)+Resource.msg('product.description.dots', 'product', null)}
+                <a href="#collapseTwo" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseTwo" data-target="#collapseTwo" aria-controls="collapseTwo">${Resource.msg('product.description.show.button', 'product', null)}</a>
+            </p>
+        </div>
+        <div class="collapse" id="collapseTwo" data-parent=".description">
+            <p>
+                ${product.shortDescription}
+                <a href="#collapseOne" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseOne" data-target="#collapseOne" aria-controls="collapseOne">${Resource.msg('product.description.hide.button', 'product', null)}</a>
+            </p>
+        </div>
+    </div>
+<iselse/>
+    <div class="col-sm-12 col-md-8 col-lg-9 value content"
+        id="collapsible-description-${loopState && loopState.count ? loopState.count : '1'}">
+        <isprint value="${product.shortDescription}" encoding="off" />
+    </div>
+</isif>

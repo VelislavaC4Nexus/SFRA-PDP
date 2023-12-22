@@ -20,6 +20,7 @@ module.exports = {
         var productId = params.pid;
         var product = Object.create(null);
         var apiProduct = ProductMgr.getProduct(productId);
+        var length = apiProduct.recommendations.length
         if (apiProduct === null) {
             return product;
         }
