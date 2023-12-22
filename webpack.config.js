@@ -24,14 +24,14 @@ module.exports = [{
     mode: 'production',
     name: 'js',
     entry: jsFiles,
-    // output: {
-    //     path: path.resolve('./cartridges/app_custom_pdp/cartridge/static'),
-    //     filename: '[name].js'
-    // },
     output: {
-        path: path.resolve('./cartridges/app_storefront_base/cartridge/static'),
+        path: path.resolve('./cartridges/app_custom_pdp/cartridge/static'),
         filename: '[name].js'
     },
+    // output: {
+    //     path: path.resolve('./cartridges/app_storefront_base/cartridge/static'),
+    //     filename: '[name].js'
+    // },
     module: {
         rules: [
             {
@@ -52,14 +52,14 @@ module.exports = [{
     mode: 'none',
     name: 'scss',
     entry: scssFiles,
-    // output: {
-    //     path: path.resolve('./cartridges/app_custom_pdp/cartridge/static'),
-    //     filename: '[name].css'
-    // },
     output: {
-        path: path.resolve('./cartridges/app_storefront_base/cartridge/static'),
+        path: path.resolve('./cartridges/app_custom_pdp/cartridge/static'),
         filename: '[name].css'
     },
+    // output: {
+    //     path: path.resolve('./cartridges/app_storefront_base/cartridge/static'),
+    //     filename: '[name].css'
+    // },
     module: {
         rules: [{
             test: /\.scss$/,

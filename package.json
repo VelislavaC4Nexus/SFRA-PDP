@@ -117,7 +117,7 @@
   "paths": {
     "base": "../storefront-reference-architecture-master/cartridges/app_storefront_base/"
   },
-  "packageName": "app_storefront_base",
+  "packageName": "app_custom_pdp",
   "babel": {
     "presets": [
       "env"
