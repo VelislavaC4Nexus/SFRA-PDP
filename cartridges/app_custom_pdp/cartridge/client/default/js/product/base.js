@@ -232,7 +232,6 @@ function updateOptions(optionsHtml, $productContainer) {
  * @param {jQuery} $productContainer - DOM element for a given product
  */
 function createCarousel(imgs, $productContainer) {
-    console.log("createCarousel-custom");
     return;
     var carousel = $productContainer.find('.carousel');
     $(carousel).carousel('dispose');
@@ -346,7 +345,6 @@ function updateQuantities(quantities, $productContainer) {
  */
 function attributeSelect(selectedValueUrl, $productContainer) {
     if (selectedValueUrl) {
-        console.log("selectedValueUrl-custom");
         $('body').trigger('product:beforeAttributeSelect',
             { url: selectedValueUrl, container: $productContainer });
 
@@ -613,7 +611,6 @@ module.exports = {
 
     availability: function () {
         $(document).on('change', '.quantity-select', function (e) {
-            console.log('avail-custom');
             e.preventDefault();
 
             var $productContainer = $(this).closest('.product-detail');
