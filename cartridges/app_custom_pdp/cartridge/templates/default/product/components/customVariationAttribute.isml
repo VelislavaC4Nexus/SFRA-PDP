@@ -1,5 +1,7 @@
 <isscript>
+        var assets = require('*/cartridge/scripts/assets');
         assets.addCss('/css/product/components/variationAttribute.css');
+        assets.addJs('/js/varAttrColor.js');
 </isscript>
 
 <iscomment>
@@ -22,8 +24,9 @@
         </span>
 
         <!-- Circular Swatch Image Attribute Values -->
-        <isloop items="${attr.values}" var="attrValue">
+        <isloop items="${attr.values}" var="attrValue" >
             <isif condition="${!(isBundle && product.productType === 'variant' && !attrValue.selected)}">
+
                 <button class="color-attribute d-none"
                     aria-label="${Resource.msg('label.select', 'common', null)} ${attr.displayName} ${attrValue.displayValue}"
                     aria-describedby="${attrValue.id}" data-url="${attrValue.url}" ${product.productType === "variant" && isBundle ? "disabled" : ""}>
